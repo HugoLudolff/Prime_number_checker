@@ -1,5 +1,5 @@
 from menu import menu, menu_numero
-import math
+import time
 
 def checker(number):
     if number <= 3:
@@ -32,6 +32,7 @@ def printer(number):
 def function(number):
     while True:
         number = menu_numero()
+        time.sleep(0.5)
         if number < 0:
             print('Negative numbers wont work')
         elif number == 0:
@@ -48,9 +49,11 @@ def main():
     while True:
         option = menu()
         if option == '1':
+            time.sleep(0.5)
             function(number)
         elif option == '2':
             print('Quiting...')
+            time.sleep(1)
             break
         else: 
             print('Invalid Input!')
