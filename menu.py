@@ -2,7 +2,8 @@ def menu():
     menu = """
 ===========MENU==========
 [1] - Start
-[2] - Quit
+[2] - Prime range
+[3] - Quit
 =========================
 --> """
     return input(menu)

@@ -41,7 +41,21 @@ def function(number):
             print('One')
         else: 
             printer(number)
+
+
+def generate_primes_range():
+    primes_in_range = []
+    number = int(input("Enter a positive integer: "))
+    number2 = int(input("Enter another positive integer: "))
     
+    for i in range(number, number2):
+        #checker(i)
+        if checker(i):
+            primes_in_range.append(i)
+    print(f'Prime numbers in the range {number} - {number2}: {primes_in_range}')
+
+            
+        
 
 
 def main():
@@ -52,6 +66,8 @@ def main():
             time.sleep(0.5)
             function(number)
         elif option == '2':
+            generate_primes_range()
+        elif option == '3':
             print('Quiting...')
             time.sleep(1)
             break
